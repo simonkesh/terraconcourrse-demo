@@ -1,7 +1,7 @@
-resources:
-- name: source-code
-  type: git
-  source:
-    uri: https://github.com/simonkesh/terraconcourrse-demo
-    branch: main
-    
+# resources:
+#   - name: terraconcourse
+#     type: git
+#     source:
+#       uri: https://github.com/simonkesh/terraconcourrse-demo
+#       branch: main
+      

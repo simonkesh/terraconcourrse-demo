@@ -1,0 +1,37 @@
+---
+resources:
+  - name: terraconcourse
+    type: git
+    source:
+      uri: https://github.com/simonkesh/terraconcourrse-demo
+      branch: main
+      
+
+jobs:
+  - name: development
+    max_in_flight: 1
+    plan: 
+      - get: terraconcourse
+        trigger: true
+      - task: get-tako
+        config:
+          platform: linux
+
+          image_resource:
+            type: docker-image
+            source:
+              repository: hashicorp/terraform   
+          run:
+            path: sh
+            args:
+              - -exc
+              - |
+                env
+                export AWS_ACCESS_KEY_ID="AKIAW7X2O3VG74MQCZNS"
+                export AWS_SECRET_ACCESS_KEY="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"
+                export AWS_DEFAULT_REGION="us-east-1"
+                terraform init
+                terraform plan  
+            dir: terraconcourse   
+          inputs: 
+          - name: terraconcourse
