@@ -1,6 +1,6 @@
-aws_access_key = "AKIA6JNAEHV5QCJN7KNA"
+aws_access_key = "AKIAY7J2LW7I4IJOSIMZ"
 
-aws_secret_key = "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"
+aws_secret_key = "Vmy1HvQ4+G60bXgpwEqe6ft4iBrptwgGgV5Wb6gv"
 
 billing_code = "ACCT8675309"
 
